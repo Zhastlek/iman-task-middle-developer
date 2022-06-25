@@ -7,9 +7,9 @@ import (
 )
 
 type handler struct {
-	// creater service.ServiceCreater
-	getter service.ServiceGetter
-	editer service.ServiceEditer
+	creater service.ServiceCreater
+	getter  service.ServiceGetter
+	editer  service.ServiceEditor
 }
 
 type Register interface {

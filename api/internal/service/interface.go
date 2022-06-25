@@ -3,7 +3,7 @@ package service
 type ServiceGetter interface {
 }
 
-type ServiceEditer interface {
+type ServiceEditor interface {
 }
 
 type ServiceCreater interface {

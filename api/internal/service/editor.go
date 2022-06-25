@@ -7,7 +7,7 @@ import (
 type editPostService struct {
 }
 
-func NewEditerService() ServiceEditer {
+func NewEditerService() ServiceEditor {
 	return &editPostService{}
 }
 

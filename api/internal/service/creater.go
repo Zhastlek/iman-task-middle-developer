@@ -3,6 +3,6 @@ package service
 type createrPostService struct {
 }
 
-func NewCreaterService() ServiceEditer {
+func NewCreaterService() ServiceCreater {
 	return &createrPostService{}
 }

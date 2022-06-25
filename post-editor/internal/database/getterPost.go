@@ -3,7 +3,7 @@ package database
 import (
 	"database/sql"
 	"fmt"
-	"iman-task/post-editer/internal/models"
+	"iman-task/post-editor/internal/models"
 	"log"
 	"strconv"
 )

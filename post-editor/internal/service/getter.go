@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
-	"iman-task/post-editer/internal/database"
-	"iman-task/post-editer/internal/models"
+	"iman-task/post-editor/internal/database"
+	"iman-task/post-editor/internal/models"
 	"log"
 )
 

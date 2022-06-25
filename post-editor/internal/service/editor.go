@@ -2,18 +2,18 @@ package service
 
 import (
 	"errors"
-	"iman-task/post-editer/internal/database"
-	"iman-task/post-editer/internal/models"
+	"iman-task/post-editor/internal/database"
+	"iman-task/post-editor/internal/models"
 	"log"
 )
 
-func NewEditerService(storage database.EditerStorage) ServiceEditer {
-	return &editerPost{
+func NewEditorService(storage database.EditorStorage) ServiceEditor {
+	return &editorPost{
 		storage: storage,
 	}
 }
 
-func (s *editerPost) Update(post *models.Post) error {
+func (s *editorPost) Update(post *models.Post) error {
 	if post == nil {
 		return errors.New("error invalid update post information")
 	}
@@ -24,7 +24,7 @@ func (s *editerPost) Update(post *models.Post) error {
 	return nil
 }
 
-func (s *editerPost) Delete(post *models.Post) error {
+func (s *editorPost) Delete(post *models.Post) error {
 	if post == nil {
 		return errors.New("error invalid delete post information")
 	}

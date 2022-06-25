@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"iman-task/post-editer/internal/models"
+	"iman-task/post-editor/internal/models"
 	"log"
 )
 
@@ -12,12 +12,12 @@ type editerStorage struct {
 	db *sql.DB
 }
 
-type EditerStorage interface {
+type EditorStorage interface {
 	Update(post *models.Post) error
 	Delete(post *models.Post) error
 }
 
-func NewEditerStorage(db *sql.DB) EditerStorage {
+func NewEditorStorage(db *sql.DB) EditorStorage {
 	return &editerStorage{
 		db: db,
 	}

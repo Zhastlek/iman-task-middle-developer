@@ -1,8 +1,8 @@
 package service
 
 import (
-	"iman-task/post-editer/internal/database"
-	"iman-task/post-editer/internal/models"
+	"iman-task/post-editor/internal/database"
+	"iman-task/post-editor/internal/models"
 )
 
 type ServiceGetter interface {
@@ -10,7 +10,7 @@ type ServiceGetter interface {
 	GetSome(id []int) ([]*models.Post, error)
 }
 
-type ServiceEditer interface {
+type ServiceEditor interface {
 	Update(post *models.Post) error
 	Delete(post *models.Post) error
 }
@@ -19,6 +19,6 @@ type getterPost struct {
 	storage database.GetterStorage
 }
 
-type editerPost struct {
-	storage database.EditerStorage
+type editorPost struct {
+	storage database.EditorStorage
 }
