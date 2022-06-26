@@ -80,6 +80,7 @@ type EditorServer interface {
 	GetPostById(context.Context, *GetPostByIdRequest) (*GetPostByIdResponse, error)
 	DeletePost(context.Context, *DeletePostRequest) (*DeletePostResponse, error)
 	UpdatePost(context.Context, *UpdatePostRequest) (*UpdatePostResponse, error)
+	mustEmbedUnimplementedEditorServer()
 }
 
 // UnimplementedEditorServer must be embedded to have forward compatible implementations.

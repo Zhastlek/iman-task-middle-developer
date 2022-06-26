@@ -13,7 +13,7 @@ type Config struct {
 }
 
 func InitConfig() (*Config, error) {
-	body, err := ioutil.ReadFile("../config/config.json")
+	body, err := ioutil.ReadFile("./config/config.json")
 	if err != nil {
 		return nil, err
 	}

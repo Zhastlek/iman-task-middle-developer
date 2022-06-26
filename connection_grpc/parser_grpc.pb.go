@@ -47,7 +47,7 @@ func (c *creatorClient) Parse(ctx context.Context, in *Request, opts ...grpc.Cal
 // for forward compatibility
 type CreatorServer interface {
 	Parse(context.Context, *Request) (*Response, error)
-
+	mustEmbedUnimplementedCreatorServer()
 }
 
 // UnimplementedCreatorServer must be embedded to have forward compatible implementations.

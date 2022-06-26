@@ -24,11 +24,11 @@ func (s *editorPost) Update(post *models.Post) error {
 	return nil
 }
 
-func (s *editorPost) Delete(post *models.Post) error {
-	if post == nil {
-		return errors.New("error invalid delete post information")
+func (s *editorPost) Delete(id int32) error {
+	if id < 0 {
+		return errors.New("error invalid delete post id")
 	}
-	if err := s.storage.Delete(post); err != nil {
+	if err := s.storage.Delete(id); err != nil {
 		log.Printf("error in delete service method: -- %v\n", err)
 		return err
 	}

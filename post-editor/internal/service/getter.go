@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
+	"iman-task/connection_grpc"
 	"iman-task/post-editor/internal/database"
-	"iman-task/post-editor/internal/models"
 	"log"
 )
 
@@ -13,7 +13,7 @@ func NewGetterService(storage database.GetterStorage) ServiceGetter {
 	}
 }
 
-func (s *getterPost) GetOneById(id int) (*models.Post, error) {
+func (s *getterPost) GetOneById(id int32) (*connection_grpc.GetPostByIdResponse, error) {
 	if id < 1 {
 		return nil, errors.New("error invalid id post")
 	}
@@ -25,7 +25,7 @@ func (s *getterPost) GetOneById(id int) (*models.Post, error) {
 	return post, nil
 }
 
-func (s *getterPost) GetSome(id []int) ([]*models.Post, error) {
+func (s *getterPost) GetSome(id []int32) (*connection_grpc.GetPostsResponse, error) {
 	for _, val := range id {
 		if val < 1 {
 			return nil, errors.New("error invalid id post")

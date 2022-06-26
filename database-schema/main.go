@@ -14,6 +14,7 @@ func main() {
 	log.Println(111)
 	c, err := config.InitConfig()
 	if err != nil {
+		log.Println(err)
 		return
 	}
 	log.Println(c)
@@ -32,6 +33,7 @@ func main() {
 	if err = createTable(db); err != nil {
 		return
 	}
+	log.Println("good")
 }
 
 func createTable(db *sql.DB) error {

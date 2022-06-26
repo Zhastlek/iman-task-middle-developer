@@ -13,8 +13,16 @@ docker:
 
 run:
 	go run post-parser/cmd/main.go
-	go run post-editer/cmd/main.go
+	go run post-editor/cmd/main.go
 	go run api/cmd/main.go
 
 db-tables-up:
-	database-schema/main.go
+	go run database-schema/main.go
+
+all: api parser editor
+
+api: go run api/cmd/main.go
+
+parser: go run post-parser/cmd/main.go
+
+editor:	go run post-editor/cmd/main.go

@@ -13,17 +13,19 @@ import (
 func Initialize() *gin.Engine {
 	// ctx := con
 	router := gin.Default()
-	connParser, err := grpc.Dial(":8008", grpc.WithInsecure)
+	connParser, err := grpc.Dial(":8008", grpc.WithInsecure())
 	if err != nil {
 		log.Println("connection parser port 8008 :-->", err)
 	}
-	connEditor, err := grpc.Dial(":8009", grpc.WithInsecure)
+	connEditor, err := grpc.Dial(":8009", grpc.WithInsecure())
 	if err != nil {
 		log.Println("connection editor port 8009 :-->", err)
 	}
+
 	clientParser := connection_grpc.NewCreatorClient(connParser)
 	clientEditor := connection_grpc.NewEditorClient(connEditor)
 	clientGetter := connection_grpc.NewEditorClient(connEditor)
+	log.Println("client Parser--", clientParser)
 
 	createrService := service.NewCreaterService(clientParser)
 	editorService := service.NewEditorService(clientEditor)

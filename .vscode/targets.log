@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sun Jun 26 06:21:06 2022
+# Make data base, printed on Sun Jun 26 18:42:46 2022
 
 # Variables
 
@@ -56,7 +55,7 @@ SNAP_DATA = /var/snap/code/99
 # environment
 VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:52915
+JOURNAL_STREAM = 8:55108
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -86,7 +85,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
-MANAGERPID = 1884
+MANAGERPID = 1925
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -104,7 +103,7 @@ PATH = /home/kazykenov/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/kazykenov-ubuntu:@/tmp/.ICE-unix/2515,unix/kazykenov-ubuntu:/tmp/.ICE-unix/2515
+SESSION_MANAGER = local/kazykenov-ubuntu:@/tmp/.ICE-unix/2642,unix/kazykenov-ubuntu:/tmp/.ICE-unix/2642
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -126,7 +125,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2395701dd2ca4e0c950153a3bfd329c9
+INVOCATION_ID = 37f7a47d16b54507bc5aa78fed3b9d0d
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -138,7 +137,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 9368
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4688
 # automatic
 %F = $(notdir $%)
 # environment
@@ -152,7 +151,7 @@ PWD = /home/kazykenov/company-task/iman-task-midle-developer
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2450
+SSH_AGENT_PID = 2580
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -170,7 +169,6 @@ VSCODE_CODE_CACHE_PATH = /home/kazykenov/.config/Code/CachedData/30d9c6cd9483b2c
 # environment
 LOGNAME = kazykenov
 # environment
- 
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
@@ -207,7 +205,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-229d6e0c-05ce-47a0-bb9a-76eea0b2b122.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9eb08f6a-7286-4135-b4e8-e2dcf0647ead.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -295,8 +293,9 @@ LC_ADDRESS = kk_KZ.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9421
+VSCODE_PID = 4741
 # variable set hash-table stats:
+ 
 # Load=141/1024=14%, Rehash=0, Collisions=24/166=14%
 
 # Pattern-specific Variable Values
@@ -305,7 +304,6 @@ VSCODE_PID = 9421
 
 # Directories
 
- 
 # . (device 66310, inode 7080583): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
@@ -391,6 +389,6 @@ proto-parser:
 # strcache performance: lookups = 36 / hit rate = 25%
 # hash-table stats:
 # Load=27/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Sun Jun 26 06:21:06 2022
+# Finished Make data base on Sun Jun 26 18:42:46 2022
 
  

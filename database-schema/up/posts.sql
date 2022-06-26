@@ -1,5 +1,5 @@
 CREATE TABLE posts(
-	id SERIAl,
+	id SERIAl UNIQUE,
 	user_id INTEGER,
 	title TEXT,
 	body TEXT

@@ -27,6 +27,7 @@ func Initialize() *grpc.Server {
 	createStorage := database.NewCreateStorage(db)
 	createrService := service.NewCreateService(createStorage)
 	createrProvider := provider.NewCreaterProvider(createrService)
+	log.Println("provider--->", createrProvider)
 
 	connection_grpc.RegisterCreatorServer(server, createrProvider)
 	return server
