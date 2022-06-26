@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"iman-task/config"
 	"iman-task/post-parser/internal/models"
+
+	_ "github.com/lib/pq"
 )
 
 type storage struct {

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package editer;
 
-option go_package = "pkg/grpc";
+option go_package = "./connection_grpc";
 
 service Editor {
     rpc GetPosts(GetPostsRequest) returns (GetPostsResponse);

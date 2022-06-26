@@ -16,8 +16,12 @@ type Register interface {
 	Register(router *gin.Engine)
 }
 
-func NewHandler() Register {
-	return &handler{}
+func NewHandler(creater service.ServiceCreater, getter service.ServiceGetter, editer service.ServiceEditor) Register {
+	return &handler{
+		creater: creater,
+		getter:  getter,
+		editer:  editer,
+	}
 }
 
 var (

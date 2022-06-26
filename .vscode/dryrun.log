@@ -1,7 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/kazykenov/company-task/iman-task-midle-developer'
-api/ protoc --go_out=. --go_opt=paths=source_relative \
-    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
-    proto/parser.proto
+protoc -I ./proto --go_out=./connection_grpc --go_opt=paths=source_relative \
+--go-grpc_out=./connection_grpc --go-grpc_opt=paths=source_relative \
+parser.proto
 make: Leaving directory '/home/kazykenov/company-task/iman-task-midle-developer'
  

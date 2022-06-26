@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"iman-task/config"
+
+	_ "github.com/lib/pq"
 )
 
 func InitializeDatabase(c *config.Config) (*sql.DB, error) {
