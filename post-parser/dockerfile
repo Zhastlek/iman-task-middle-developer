@@ -1,0 +1,11 @@
+FROM golang
+
+LABEL project="proto-parser-service"
+
+WORKDIR /proto-parser
+
+COPY . ../
+
+RUN go build cmd/main.go
+
+CMD ["./main"]

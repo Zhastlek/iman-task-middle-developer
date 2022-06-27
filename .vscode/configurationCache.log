@@ -1,1 +1,1 @@
-{"buildTargets":["db-tables-up","docker","proto-editor","proto-parser","run"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["all","api","db-tables-up","docker","editor","parser","proto-editor","proto-parser","run"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

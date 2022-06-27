@@ -12,17 +12,17 @@ docker:
 	docker-compose up
 
 run:
-	go run post-parser/cmd/main.go
-	go run post-editor/cmd/main.go
+	go run database-schema/main.go &
+	go run post-parser/cmd/main.go &
+	go run post-editor/cmd/main.go &
 	go run api/cmd/main.go
 
 db-tables-up:
 	go run database-schema/main.go
 
-all: api parser editor
+pusk:
+	docker image build -f api/dockerfile . -t imagename
+	docker container run -p 9000:9000 -d --name api imagename
 
-api: go run api/cmd/main.go
-
-parser: go run post-parser/cmd/main.go
-
-editor:	go run post-editor/cmd/main.go
+clean:
+	docker system prune -a

@@ -1,0 +1,11 @@
+FROM golang
+
+LABEL project="api-service"
+
+WORKDIR /api
+
+COPY . ../
+
+RUN go build cmd/main.go
+
+CMD ["./main"]

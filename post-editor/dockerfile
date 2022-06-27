@@ -1,0 +1,11 @@
+FROM golang
+
+LABEL project="proto-editor-service"
+
+WORKDIR /proto-editor
+
+COPY . ../
+
+RUN go build cmd/main.go
+
+CMD ["./main"]
