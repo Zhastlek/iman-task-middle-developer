@@ -8,8 +8,8 @@ import (
 
 func main() {
 	server := app.Initialize()
-	l, err := net.Listen("tcp", ":8009")
-	log.Println("Server run is 8009 port...")
+	l, err := net.Listen("tcp", ":8010")
+	log.Println("Server run is 8010 port...")
 	if err != nil {
 		log.Fatal(err)
 	}

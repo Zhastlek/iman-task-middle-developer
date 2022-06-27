@@ -32,6 +32,8 @@ func (s *editerStorage) Update(post *models.Post) error {
 	if err != nil {
 		return err
 	}
+	// log.Println(post.Id, post.UserID)
+	// log.Println(updateText)
 	defer tx.Rollback()
 	res, err := tx.Exec(updateText)
 	if err != nil {

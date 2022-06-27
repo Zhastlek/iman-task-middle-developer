@@ -17,6 +17,7 @@ func (s *editorPost) Update(post *models.Post) error {
 	if post == nil {
 		return errors.New("error invalid update post information")
 	}
+	// log.Println(post.Id, post.UserID)
 	if err := s.storage.Update(post); err != nil {
 		log.Printf("error in update service method: -- %v\n", err)
 		return err

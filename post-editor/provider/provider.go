@@ -53,6 +53,7 @@ func (g *GRPCServer) UpdatePost(ctx context.Context, req *connection_grpc.Update
 		Title:  req.GetTitle(),
 		Body:   req.GetBody(),
 	}
+	// log.Println(post.Id, post.UserID)
 	if err := g.editor.Update(post); err != nil {
 		log.Printf("error in update post in post editor provider:--->%v\n", err)
 		return &connection_grpc.UpdatePostResponse{Status: "failed"}, err

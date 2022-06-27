@@ -4,14 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"iman-task/connection_grpc"
-	"iman-task/post-parser/internal/models"
-	"iman-task/post-parser/internal/service"
 	"log"
 	"net/http"
 	"strconv"
 	"sync"
 	"time"
+
+	"iman-task/connection_grpc"
+	"iman-task/post-parser/internal/models"
+	"iman-task/post-parser/internal/service"
 )
 
 type GRPCServer struct {
@@ -27,7 +28,7 @@ func NewCreaterProvider(creater service.CreatePostsService) connection_grpc.Crea
 
 func (g *GRPCServer) Parse(ctx context.Context, req *connection_grpc.Request) (*connection_grpc.Response, error) {
 	reqString := req.GetUrl()
-	log.Println("praser provider", reqString)
+	// log.Println("praser provider", reqString)
 	i := 1
 	var wg sync.WaitGroup
 	t := time.Now()
@@ -44,7 +45,7 @@ func (g *GRPCServer) Parse(ctx context.Context, req *connection_grpc.Request) (*
 				json.NewDecoder(r.Body).Decode(&generator)
 				defer r.Body.Close()
 				data := generator.Posts
-				log.Println(data)
+				// log.Println(data)
 				if err := g.creater.Create(data); err != nil {
 					log.Println("error create posts method--->", err)
 				}

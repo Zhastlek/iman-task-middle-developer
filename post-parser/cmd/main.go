@@ -10,7 +10,6 @@ func main() {
 	server := app.Initialize()
 	l, err := net.Listen("tcp", ":8008")
 	log.Println("Server run is 8008 port...")
-	log.Println("p")
 	if err != nil {
 		log.Fatal(err)
 	}

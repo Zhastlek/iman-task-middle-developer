@@ -18,7 +18,7 @@ func NewEditorService(editor connection_grpc.EditorClient) ServiceEditor {
 }
 
 func (s *editPostService) UpdateOne(post *models.Post) (string, error) {
-	resp, err := s.editor.UpdatePost(context.Background(), &connection_grpc.UpdatePostRequest{Id: int32(post.Id), UserId: int32(post.Id), Title: post.Title, Body: post.Body})
+	resp, err := s.editor.UpdatePost(context.Background(), &connection_grpc.UpdatePostRequest{Id: int32(post.Id), UserId: int32(post.UserID), Title: post.Title, Body: post.Body})
 	if err != nil {
 		log.Printf("error update one post service:-->%v\n", err)
 		return resp.GetStatus(), err
